@@ -1,11 +1,13 @@
-function App() {
+import Divider from "./components/Divider";
+import TableContainer from "./components/TableContainer";
+import TableHead from "./components/TableHead";
 
+function App() {
   return (
-    <div className="min-h-screen flex justify-center items-center">
-      <h1 className="text-3xl font-bold text-blue-600">
-      Install & Setup Vite + React + Typescript + Tailwind CSS 3
-      </h1>
-    </div>
+    <TableContainer className="w-[80rem]">
+      <TableHead />
+      <Divider className="mt-12" />
+    </TableContainer>
   );
 }
 
