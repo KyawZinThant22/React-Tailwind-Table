@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ButtonGroup from "./components/Element/ButtonGroup";
+import SwitchButton from "./components/Element/SwitchButton";
 export interface ISelectedData {
   data: string;
   label: string;
@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="container mx-auto mt-12 w-48">
-      <ButtonGroup
+      <SwitchButton
         value={Data}
         onChange={handleSelect}
         selected={selectedData}

@@ -10,7 +10,7 @@ interface IButton {
   selected: ISelectedData;
 }
 
-export const ButtonGroup = ({ value, onChange, selected }: IButton) => {
+export const SwitchButton = ({ value, onChange, selected }: IButton) => {
   //UI က ကြိုက်သလိုပြင်လိုက်တော့ 😂
   return (
     <div className="h-[30px] px-[20px] bg-[#E8E8E8] rounded-[75.5px] flex items-center gap-3  ">
@@ -29,4 +29,4 @@ export const ButtonGroup = ({ value, onChange, selected }: IButton) => {
   );
 };
 
-export default ButtonGroup;
+export default SwitchButton;
