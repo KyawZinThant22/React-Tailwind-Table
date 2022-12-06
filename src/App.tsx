@@ -1,13 +1,37 @@
-import Divider from "./components/Divider";
-import TableContainer from "./components/TableContainer";
-import TableHead from "./components/TableHead";
+import { useState } from "react";
+import Button from "./components/Button";
+
+export interface ISelectedData {
+  data: string;
+  label: string;
+}
 
 function App() {
+  const [selectedData, setSelectedData] = useState<ISelectedData>({
+    data: "user",
+    label: "",
+  });
+
+  console.log(selectedData);
+
+  const Data = [
+    { label: "User", data: "user" },
+    { label: "Merchant", data: "merchant" },
+    { label: "Both", data: "both" },
+  ];
+
+  const handleSelect = (value: string) => {
+    Data.map((item) => {
+      if (value === item.data) {
+        setSelectedData(item);
+      }
+    });
+  };
+
   return (
-    <TableContainer className="w-[80rem]">
-      <TableHead search filter />
-      {/* <Divider className="mt-12" /> */}
-    </TableContainer>
+    <div className="container mx-auto mt-12 w-48">
+      <Button value={Data} onChange={handleSelect} selected={selectedData} />
+    </div>
   );
 }
 
