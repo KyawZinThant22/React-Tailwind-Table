@@ -1,6 +1,5 @@
 import { useState } from "react";
-import Button from "./components/Button";
-
+import ButtonGroup from "./components/Element/ButtonGroup";
 export interface ISelectedData {
   data: string;
   label: string;
@@ -30,7 +29,11 @@ function App() {
 
   return (
     <div className="container mx-auto mt-12 w-48">
-      <Button value={Data} onChange={handleSelect} selected={selectedData} />
+      <ButtonGroup
+        value={Data}
+        onChange={handleSelect}
+        selected={selectedData}
+      />
     </div>
   );
 }
