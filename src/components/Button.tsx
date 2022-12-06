@@ -11,6 +11,7 @@ interface IButton {
 }
 
 const Button = ({ value, onChange, selected }: IButton) => {
+  //UI က ကြိုက်သလိုပြင်လိုက်တော့ 😂
   return (
     <div className="h-[30px] px-[20px] bg-[#E8E8E8] rounded-[75.5px] flex items-center gap-3  ">
       {value.map((item, key: React.Key) => (
